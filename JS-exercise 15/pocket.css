@@ -162,6 +162,7 @@ button {
     left: 0;
     display: flex;
     width: 100%;
+    height:100%;
     background-color:rgba(0,0,0,0.5);
 }
 /* modal1 styling - new note*/
@@ -177,7 +178,7 @@ button {
     justify-content: space-between;
     padding: 25px;
     width:30%;
-    height:100vh;
+    height:100%;
     cursor: pointer;
     background-color: #000;
 }
@@ -245,6 +246,7 @@ button {
 .new-notes {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 12.5px 10px 12.5px 10px;
     margin:0 0 20px 10px;
     font-family: lato;
@@ -462,21 +464,17 @@ button {
 
     /* header styling*/
     .header h1 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .header-left {
         margin-bottom: 5px;
         margin-right: 10px;
     }
     /* button styling*/
-    .delete-button {
-        padding: 5px 20px;
+    .delete-button,.new-button, .delete, .edit-button {
+        padding: 5px 10px;
         margin-right: 5px;
-        margin-bottom: 5px;    
-    }
-    .new-button {
-        padding: 5px 20px;
-        margin-right: 5px;
+        font-size: 0.6rem;   
     }
     /* delete confirmation styling*/
     .confirm-delete {
@@ -508,6 +506,9 @@ button {
     .container {
         justify-content: center;
     }
+    .new-note {
+        font-size: 0.5rem;
+    }
     /* container content styling*/
     .notes-content {
         margin: 0 7.5%;
@@ -515,10 +516,13 @@ button {
         font-size: 0.9rem;
         height: 20%;
     }
+    #notesTitle {
+        font-size: 0.8rem;
+    }
     .input {
         margin: 10px;
         width: 80%;
-        font-size: 0.6rem;
+        font-size: 0.5rem;
     }
     .image {
         width: 85%;
@@ -528,16 +532,17 @@ button {
     }
     /* color styling*/
     .color {
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
+        width: 15px;
+        height: 15px;
+        margin-right: 2.5px;
     }
     .display {
         display: none;
     }
     .add-save-button {
-        padding: 8px 20px;
+        padding: 4px 10px;
         margin-bottom: 10px;
+        font-size: 0.7rem;
     } 
     /*notes-container styling*/
     .notes-container {
@@ -548,9 +553,12 @@ button {
     .modal2 {
         height:20%;
     }
+    .fa-check {
+        font-size: 1rem;
+    }
     .tick {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
     }
     /*individual note content styling*/
     .title-date h1 {
