@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JS-Exercise 12</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;800&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a4fd53f33d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <!--container content-->
+        <div class="container">
+            <!--header content-->
+            <ul class="header" id="header">
+                <li>MATH KIDS</li>
+                <li>KIDS LEARNING APP</li>
+            </ul>
+            <!--end of header content-->
+            <!--choose container content-->
+            <div class="choose-container">
+                <p class="p">1. Choose a Shape </p>
+                <!--Shapes content-->
+                <div class="shapes">
+                    <div class="circle">
+                        <div class="display tick-circle"><i class="fa fa-check  " ></i></div>
+                    </div>
+                    <div class="triangle">
+                        <div class="display tick-triangle"><i class="fa fa-check" ></i></div>
+                    </div>
+                    <div class="square">
+                        <div class="display tick-square"><i class="fa fa-check" ></i></div>
+                    </div>
+                </div>
+                <!--end of Shapes content-->
+                <!--next button-->
+                <button id="next-button" class="display">Next</button>
+                <!--end of next button-->
+            </div>
+            <!--end of choose container content-->
+            <!--calculate container content-->
+            <div class="calculate-container display">
+                <p class="p">2. Enter <span class="parameter"></span> </p>
+                <div>
+                <input type="text" id="input" class="button" ><br>
+                <!--calculate button-->
+                <button id="calculate-button" class="button" >CALCULATE</button>
+                </div>
+            </div>
+            <!--end of calculate container content-->
+            <!--result container content-->
+            <div class="result-container display">
+                <!--selected shape content-->
+                <div class="shapes" >
+                    <div class="circle display" id="circle"></div>
+                    <div class="triangle display" id="triangle"></div>
+                    <div class="square display" id="square"></div>
+                </div>
+                <p class="p"><span class="type"></span> </p>
+                <!--end of selected shape content-->
+                <!--result content-->
+                <div class="details">
+                    <p class="col1" id="parameter">SIDE</p>
+                    <p class="col2" id="parameterunit"></p>
+                    <p class="col3" id="inputvalue"></p>
+                </div>
+                <div class="details">
+                    <p class="col1">AREA</p>
+                    <p class="col2" id="area-formula"></p>
+                    <p class="col3" id="area-value"></p>
+                </div>
+                <div class="details">
+                    <p class="col1">PERIMETER</p>
+                    <p class="col2" id="perimeter-formula"></p>
+                    <p class="col3" id="perimeter-value"></p>
+                </div>
+                <!--end of result content-->
+                <!--start button-->
+                <button id="start-again" class="button" >START AGAIN</button>
+                <!--end of start button-->         
+            </div>
+        </div>
+        <!--end of container content-->
+        <!--Script-->
+        <script src="app.js"></script> 
+        <!--end of Script-->     
+    </body>
+</html>

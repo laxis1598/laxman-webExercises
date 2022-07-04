@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Js-Exercise 14</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500;600;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="formvalidation.css">
+    </head>
+    <body>
+        <!--form container-->
+        <div class="form-container">
+            <form>
+                <h1>Regex Form Validation</h1>
+                <!--first name content-->
+                <label for="firstName">
+                    First Name
+                </label>
+                <input type="text" id="firstName" >
+                <p class="display" id="firstNameErr">
+                    First Name is not Valid
+                </p>
+                <p class="display" id="firstNameEmpty">
+                    First Name is required
+                </p>
+                <!--last name content-->
+                <label for="lastName">
+                    Last Name
+                </label>
+                <input type="text" id="lastName">
+                <p class="display"  id="lastNameErr">
+                    Last Name is not Valid
+                </p>
+                <p class="display" id="lastNameEmpty">
+                    Last Name is required
+                </p>
+                <!--email content-->
+                <label for="email">
+                    Email
+                </label>
+                <input type="email" id="email">
+                <p class="display"  id="emailErr">
+                    Email Address is not Valid
+                </p>
+                <p class="display" id="emailEmpty">
+                    Email Address is required
+                </p>
+                <!--contact number content-->
+                <label for="contactNnumber">
+                    Contact Number
+                </label>
+                <input type="number" id="contactNumber">
+                <p class="display"  id="contactErr">
+                    Contact Number is not Valid
+                </p>
+                <p class="display" id="contactEmpty">
+                    Contact Number is required
+                </p>
+                <!--pin code content-->
+                <label for="pinCode">
+                    Pin Code
+                </label>
+                <input type="number" id="pinCode">
+                <p class="display"  id="pinCodeErr">
+                    PIN Code is not Valid
+                </p>
+                <p class="display" id="pinCodeEmpty">
+                    PIN Code is required
+                </p>
+                <!--card number content-->
+                <label for="cardNumber">
+                    Card Number
+                </label>
+                <input type="number" id="cardNumber">
+                <p class="display"  id="cardNumErr">
+                    Card Number is not Valid
+                </p>
+                <p class="display" id="cardNumEmpty">
+                    Card Number is required
+                </p>
+                <!--card expiry year content-->
+                <label for="cardExpiry">
+                    Card Expiry (Year)
+                </label>
+                <input type="number" id="cardExpiry">
+                <p class="display"  id="cardExpiryErr">
+                    Card Expiry is not Valid
+                </p>
+                <p class="display" id="cardExpiryEmpty">
+                    Card Expiry is required
+                </p>
+                <!--cvv content-->
+                <label for="cvv">
+                    CVV
+                </label>
+                <input type="number" id="cvv">
+                <p class="display"  id="cvvErr">
+                    CVV is not Valid
+                </p>
+                <p class="display" id="cvvEmpty">
+                    CVV is required
+                </p>
+            </form>
+        </div>
+        <!--end of form container-->
+        <!--script to link the js-->
+        <script src="formvalidation.js"></script>
+    </body>
+</html>

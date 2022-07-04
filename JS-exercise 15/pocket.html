@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Pocket Notes</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;500;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/a4fd53f33d.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="pocket.css">
+    </head>
+    <body>
+        <!--header content-->
+        <div class="header">
+            <div class="header-left">
+                <i class="fa fa-arrow-left display" aria-hidden="true"></i>
+                <h1>Pocket Notes</h1> 
+            </div>
+            <div class="header-button">
+                <button class="delete-button display">DELETE ALL</button>
+                <button class="delete display">DELETE</button>
+                <button class="new-button ">NEW</button>
+                <button class="edit-button display">EDIT</button>
+            </div>
+        </div>
+        <!--end of header content-->
+        <!--empty notes content-->
+        <div class="empty-notes ">
+            <i class="fa fa-cube"></i>
+            <p>Notes you add appear here</p>
+        </div>
+        <!--end of empty notes content-->
+        <!--container which takes up all the added notes-->
+        <div class="main-container">
+        <div class="container"></div>
+        </div>
+        <!--cend of the container which takes up all the added notes-->
+        <!--load more button-->
+        <div class="load-more">
+            <button class="load-button">Load More</button>
+        </div>
+        <!--end of load more button-->
+        <!--modal1 display-when new button is clicked-->
+        <div class="modal1-bg display modal" id="modal1Bg">
+            <div class="modal1">
+                <div>
+                    <div class="new-notes">
+                        <p class="new-note">NEW NOTE</p>
+                        <p class="close-modal1">X</p>
+                    </div>
+                    <!--input content-notes title,image url,text content-->
+                    <input type="text" class="input" id="notesTitle" placeholder="Notes Title">
+                    <p class="notes-title error display">Notes Title is required</p>
+                    <input type="text" class="input" id="imageUrl" placeholder="Add Image URL">
+                    <textarea class="input" id="content" rows="10" cols="50" placeholder="Add Content Here"></textarea>
+                    <p class="content error display">Content is required</p>
+                    <!--end of input content-->
+                </div>
+                <!--modal bottom content- 5 different colors & add button-->
+                <div class="modal-bottom">
+                    <div class="color-container">
+                        <div class="color first-color" id="newFirstColor">
+                            <div class="display " id="tickFirst">
+                                <i class="fa fa-check" ></i>
+                            </div>
+                        </div>
+                        <div class="color second-color" id="newSecondColor">
+                            <div class="display " id="tickSecond">
+                                <i class="fa fa-check" ></i>
+                            </div>
+                        </div>
+                        <div class="color third-color" id="newThirdColor">
+                            <div class="display " id="tickThird">
+                                <i class="fa fa-check" ></i>
+                            </div>
+                        </div>
+                        <div class="color fourth-color" id="newFourthColor">
+                            <div class="display" id="tickFourth">
+                                <i class="fa fa-check" ></i>
+                            </div>
+                        </div>
+                        <div class="color fifth-color" id="newFifthColor">
+                            <div class="display" id="tickFifth">
+                                <i class="fa fa-check" ></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="add-button opacity add-save-button">ADD</button>
+                </div>
+                <!--end of modal bottom content-->
+            </div>
+         </div>
+         <!--end of modal1-->
+         <!--modal2 display-when delete all button is clicked-->
+         <div class="modal2-bg display modal">
+             <div class="modal2">
+                 <div class="confirm-delete">
+                    <p class="confirm">DELETE ALL NOTES</p>
+                    <p class="close-modal2">X</p>
+                </div>
+                <p class="sure-delete">Are you sure you want to delete all notes?</p>
+                <button class="yes-delete">YES, DELETE</button>
+             </div>
+         </div>
+         <!--end of modal2-->
+         <!--modal3 display-when edit note is clicked-->
+         <div class="modal3-bg display modal" id="modal3Bg">
+            <div class="modal1 ">
+                <div>
+                    <div class="new-notes">
+                        <p class="new-note">EDIT NOTE</p>
+                        <p class="close-modal1" id="closeModal3" >X</p>
+                    </div>
+                    <!--edit input content-notes title,image url,text content-->
+                    <input type="text" class="input edit-notes-title" value="" placeholder="Notes Title">
+                    <p class="notes-title error display" id="editNotesTitleErr">Notes Title is required</p>
+                    <input type="text" class="input edit-img" value="" placeholder="Add Image URL">
+                    <textarea class="input edit-content"  rows="10" cols="50" value="" placeholder="Add Content Here"></textarea>
+                    <p class="content error display" id="editContentErr" >Content is required</p>
+                    <!--end of edit input content-->
+                </div>
+                <!--modal bottom content- 5 different colors & save button -->
+                <div class="modal-bottom">
+                    <div class="color-container">
+                        <div class="color first-color" id="editFirstColor">
+                            <div class="display edit-tick-first" id="editTickFirst">
+                                <i class="fa fa-check " ></i>
+                            </div>
+                        </div>
+                        <div class="color second-color" id="editSecondColor">
+                            <div class="display edit-tick-second" id="editTickSecond">
+                                <i class="fa fa-check  " ></i>
+                            </div>
+                        </div>
+                        <div class="color third-color" id="editThirdColor">
+                            <div class="display edit-tick-third" id="editTickThird">
+                                <i class="fa fa-check  " ></i>
+                            </div>
+                        </div>
+                        <div class="color fourth-color" id="editFourthColor">
+                            <div class="display edit-tick-fourth" id="editTickFourth">
+                                <i class="fa fa-check  " ></i>
+                            </div>
+                        </div>
+                        <div class="color fifth-color" id="editFifthColor">
+                            <div class="display edit-tick-fifth" id="editTickFifth">
+                                <i class="fa fa-check  " ></i>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="save-button opacity add-save-button">SAVE</button>
+                </div>
+                <!--end of modal bottom content-->
+            </div>
+         </div>
+         <!--end of modal3 display-->
+         <!--modal2 display-when delete button is clicked-->
+         <div class="modal2-bg display modal" id="individualDelete">
+            <div class="modal2">
+                <div class="confirm-delete">
+                <p class="confirm">DELETE NOTE</p>
+                <p class="close-modal2" id="closeEditDeleteModal">X</p>
+               </div>
+               <p class="sure-delete">Are you sure you want to delete this notes?</p>
+               <button class="yes-delete" id="confirmIndividualDelete">YES, DELETE</button>
+            </div>
+        </div>
+        <!--end of modal2 display-->
+        <!--modal2 display-when try to close the edit modal-->
+        <div class="modal2-bg display modal" id="editCloseModal">
+            <div class="modal2">
+                <div class="confirm-delete">
+                   <p class="confirm">CONFIRM</p>
+                   <p class="close-modal2" id="closeEditModalWarning">X</p>
+               </div>
+               <p class="sure-delete">
+                   Seems like you are in the middle of adding/editing content. Do you want to leave ?
+                </p>
+               <button class="yes-delete" id="confirmEditClose">YES, CLOSE</button>
+            </div>
+            <!--end of modal2 display-->
+        </div>
+        <!--individual note display-->
+         <div class="individual-note display">
+            <div class="note-click-container">
+                <div class="bg-title">
+                    <div class="note-color"></div>
+                    <div class="title-date">
+                        <h1 class="individual-title">Summer Time - A Long Short Story</h1>
+                        <p class="individual-date">July,1 2022</p>
+                    </div>
+                </div>
+                <img class="notes-image individual-image" src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+                <p class="individual-description">
+                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate
+                    the visual form of a document or a typeface without relying on meaningful content.
+                    Lorem ipsum may be used as a placeholder before final copy is available.
+                    In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to
+                    demonstrate the visual form of a document or a typeface without relying on meaningful content. 
+                    Lorem ipsum may be used as a placeholder before final copy is available.
+                </p>
+            </div>
+        </div>
+        <!--end of individual note display-->
+        <script src="pocket.js"></script>
+    </body>
+</html>

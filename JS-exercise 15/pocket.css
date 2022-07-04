@@ -1,0 +1,571 @@
+/*css reset styling*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*end of css reset styling*/
+
+
+
+
+
+/*general styling*/
+body {
+    background-color: #000;
+    font-family: lato;
+}
+button {
+    cursor: pointer;
+}
+/* header styling*/
+.header {
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    padding: 20px;
+    color:#fff;
+    background-color: #031d2e;
+}
+.header-button {
+    margin-right: 25px;
+}
+.header h1 {
+    font-size: 1.5rem;
+    margin-left: 20px;
+}
+.header-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-left i {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+/* button styling*/
+.delete-button,.delete,.new-button,.edit-button,.yes-delete{
+    padding: 8px 25px;
+    margin-right: 10px;
+    border-radius: 25px;
+    border: none;
+    color: #fff;
+    
+}
+.delete-button,.delete {
+    background-color: #a80000;
+}
+
+.new-button,.edit-button,.yes-delete{
+    background-color:#b354b7;
+}
+.yes-delete {
+    display: flex;
+    margin: 0 auto;
+}
+/* empty notes modal styling*/
+.empty-notes {
+    color: #5e5e5e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 200px auto;
+}
+.empty-notes i {
+    font-size: 6rem;
+    margin-bottom: 20px;
+}
+.empty-notes p {
+    font-size: 1.2rem;
+}
+/* container styling*/
+.container { 
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin: 100px auto;
+    width:1100px;
+}
+.container div {
+    margin: 10px;
+}
+.main-container {
+    display:flex;
+    justify-content: center;
+}
+.notes-content {
+    margin:0 10%;
+    width:80%;
+    height:20%;
+    line-height: 1.3;
+    overflow: hidden;
+    opacity:0.8;
+}
+.note-title {
+    margin:10% 10% 5%;
+    width:80%;
+    font-size: 1.8rem;
+    opacity: 0.8;
+}
+/* error styling*/
+.error {
+    color: red;
+    margin: 0px 12.5px;
+    font-size: 0.7rem;
+}
+/*modal styling*/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    background-color:rgba(0,0,0,0.5);
+}
+/* modal1 styling - new note*/
+.modal1-bg {
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.modal1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px;
+    width:30%;
+    height:100vh;
+    cursor: pointer;
+    background-color: #000;
+}
+/*modal 2 styling*/
+.modal2-bg {
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+}
+.modal2 {
+    width:30%;
+    height:30%;
+    background-color: #000;
+}
+/* modal3 styling*/
+.modal3-bg {
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.confirm-delete {
+    display:flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-family: lato;
+    font-size: 0.9rem;
+    background-color: #031d2e;
+    color: #fff;
+}
+.sure-delete {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    color: #fff;
+}
+/* date styling*/
+.date {
+    margin: 0 10%;
+    width:80%;
+    opacity: 0.7;
+    font-size: 0.8rem;
+}
+/*input styling*/
+.input {
+    margin: 10px;
+    opacity: 0.7;
+    border: none;
+    background-color: #000;
+    color: #fff;
+}
+.edit-notes-title {
+    font-size: 1.5rem;
+}
+/*image styling*/
+.image {
+    width: 80%;
+    height: 35%;
+    margin: 10%;
+    border-radius: 15px;
+}
+#notesTitle {
+    font-size: 1.5rem;
+}
+/* new notes styling*/
+.new-notes {
+    display: flex;
+    justify-content: space-between;
+    padding: 12.5px 10px 12.5px 10px;
+    margin:0 0 20px 10px;
+    font-family: lato;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #031d2e;
+}
+.close-modal1 {
+    opacity: 0.6;
+}
+/* color styling*/
+.color {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.first-color {
+    background-color: #ebcced;
+}
+.second-color {
+    background-color: #fcfcfc;
+}
+.third-color {
+    background-color: #ffca72;
+}
+.fourth-color {
+    background-color: #e5ee90;
+}
+.fifth-color {
+    background-color: #ffa78b;
+} 
+.display {
+    display: none;
+}
+.close-modal2 {
+    cursor: pointer;
+    opacity: 0.6;
+}
+/*load more button styling*/
+.load-more {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.load-button,.add-save-button {
+    padding: 8px 25px;
+    border-radius: 25px;
+    border: none;
+    font-size: 1rem;
+    background-color: #b354b7;
+    color: #fff;
+}
+/* add-save button styling*/
+.add-save-button {
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+}
+.modal-bottom,.color-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.color-container {
+    margin-bottom: 10px;
+}
+/* tick mark styling*/
+.tick {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+}
+.fa-check{
+    color: #000;
+    font-size: 1.5rem;
+}
+.opacity {
+    opacity:0.6;
+}
+/*notes container styling*/
+.notes-container {
+    width:255px;
+    height:400px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.note-click-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 100px auto;
+    width:80%;
+    color: #fff;
+}
+.note-color {
+    width:50px;
+    height:50px;
+    background-color: #a80000;
+    border-radius: 50%;
+}
+/*individual note content styling*/
+.bg-title {
+    display: flex;
+}
+.title-date h1 {
+    margin-left: 20px;
+    font-size: 1.5rem;
+}
+.title-date p {
+    margin-left: 20px;
+    margin-top: 7.5px;
+    color: #737373;
+}
+.notes-image,.individual-description {
+    margin-top: 20px;
+    margin-left: 70px;
+    width: 80%;
+}
+.notes-image {
+    border-radius: 20px;
+    height: 50%;
+}
+.individual-description {
+    line-height: 1.5rem;
+    color: #737373;
+}
+
+
+/*media styling for tablets*/
+@media (min-width:480px) and (max-width:776px) {
+
+    /* container styling*/
+    .container {
+        width:450px;
+    }
+    .sure-delete {
+        margin: 10%;
+        font-size: 0.8rem;
+    }
+    .yes-delete {
+        padding: 4% 10%;
+        font-size: 0.8rem;
+    }
+    .note-title {
+        margin:5%;
+        width:85%;
+        font-size: 1.2rem;
+    }
+    .date {
+        margin: 0px 7.5%;
+        width:85%;
+        font-size: 0.6rem;
+    }
+    /* container content styling*/
+    .notes-content {
+        margin: 0px 7.5%;
+        width: 85%;
+        font-size: 0.8rem;
+    }
+    .input {
+        width:80%;
+    }
+    .image {
+        width: 85%;
+        height: 35%;
+        margin: 7.5%;
+        border-radius: 5%;
+    }
+    /* color styling*/
+    .color {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    .display {
+        display: none;
+    }
+    .add-save-button {
+        padding: 8px 20px;
+    }
+    /*tick mark styling*/
+    .tick {
+        width: 20px;
+        height: 20px;
+    }
+    /*notes-container styling*/
+    .notes-container {
+        width:200px;
+        height:250px;
+       border-radius: 5px;
+    }
+    /*individual note content styling*/
+    .title-date h1 { 
+        font-size: 1.3rem;
+    }
+    .title-date p {
+        font-size: 0.8rem;
+    }
+    .notes-image {
+        height: 100%;
+    }
+    .individual-description {
+        height: 50%;
+    }
+}
+
+
+/*media styling for mobiles*/
+@media (max-width:480px) {
+
+    /* header styling*/
+    .header h1 {
+        font-size: 1.3rem;
+    }
+    .header-left {
+        margin-bottom: 5px;
+        margin-right: 10px;
+    }
+    /* button styling*/
+    .delete-button {
+        padding: 5px 20px;
+        margin-right: 5px;
+        margin-bottom: 5px;    
+    }
+    .new-button {
+        padding: 5px 20px;
+        margin-right: 5px;
+    }
+    /* delete confirmation styling*/
+    .confirm-delete {
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+    .sure-delete {
+        margin: 7.5%;
+        font-size: 0.7rem;
+    }
+    .yes-delete {
+        padding: 2% 5%;
+        margin: 0 auto;
+        font-size: 0.6rem;
+    }
+    .note-title {
+        margin: 7.5% 7.5% 3.75%;
+        width: 85%;
+        font-size: 1.5rem;
+        opacity: 0.8;
+    }
+    .date {
+        margin: 0 7.5%;
+        width: 85%;
+        opacity: 0.7;
+        font-size: 0.8rem;
+    }
+    /*container styling*/
+    .container {
+        justify-content: center;
+    }
+    /* container content styling*/
+    .notes-content {
+        margin: 0 7.5%;
+        width: 85%;
+        font-size: 0.9rem;
+        height: 20%;
+    }
+    .input {
+        margin: 10px;
+        width: 80%;
+        font-size: 0.6rem;
+    }
+    .image {
+        width: 85%;
+        height: 35%;
+        margin: 7.5%;
+        border-radius: 15px;
+    }
+    /* color styling*/
+    .color {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+    .display {
+        display: none;
+    }
+    .add-save-button {
+        padding: 8px 20px;
+        margin-bottom: 10px;
+    } 
+    /*notes-container styling*/
+    .notes-container {
+        width: 250px;
+        height: 300px;
+        border-radius: 5px;
+    }
+    .modal2 {
+        height:20%;
+    }
+    .tick {
+        width: 20px;
+        height: 20px;
+    }
+    /*individual note content styling*/
+    .title-date h1 {
+        font-size: 1.3rem;
+    }
+    .title-date p {
+        font-size: 0.8rem;
+    }
+    .notes-image {
+        height: 100%;
+    }
+    .individual-description {
+        height: 50%;
+    }
+}
+    
+    
+
